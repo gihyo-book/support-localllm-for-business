@@ -1,0 +1,26 @@
+types:
+  - name
+  - company
+  - email
+  - phone
+  - address
+  - order_id
+  - invoice_id
+  - account_number
+
+redaction_tokens:
+  name: "[NAME]"
+  company: "[COMPANY]"
+  email: "[EMAIL]"
+  phone: "[PHONE]"
+  address: "[ADDRESS]"
+  order_id: "[ORDER_ID]"
+  invoice_id: "[INVOICE_ID]"
+  account_number: "[ACCOUNT_NUMBER]"
+
+labels:
+  topic:
+    - 請求関連
+    - 契約関連
+    - 納期関連
+    - 発注関連
