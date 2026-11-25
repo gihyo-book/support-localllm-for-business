@@ -38,11 +38,11 @@ git clone https://github.com/gihyo-book/support-localllm-for-business.git
 
 | 章 | 主な実行環境・前提 |
 |---|---|
-| 第2章 | Python 3.10以降、Ollama。使用するモデルを事前に取得してください。 |
-| 第3章 | GPUクラウド上のLinux環境。GPUやソフトウェアの構成は書籍の該当節を参照してください。 |
-| 第4章 | マルチモーダルモデルを実行できる環境。使用するモデルと実行方法は書籍の該当節を参照してください。 |
-| 第5章 | 埋め込みモデルとLLMを実行できる環境。検索に使用するライブラリなどは、公開時のサンプルの手順を参照してください。 |
-| 第6章 | Python 3.12以降、uv、CUDAおよびbf16に対応したNVIDIA GPU。データセット構築の一部ではOpenAI互換APIを使用します。 |
+| 第2章 | Python 3.10以降、Ollama。サンプルに応じて `qwen3:4b-instruct`、`gemma3:12b`、`gpt-oss:20b` を取得します。`gpt-oss:20b` の実行にはメモリ32GB以上を推奨します。 |
+| 第3章 | 書籍の構成例では、さくらインターネットの「高火力 VRT」（NVIDIA H100 80GB × 1、Ubuntu 24.04 LTS）を使用します。手元の端末からSSHで接続し、サーバー上でDocker ComposeとNVIDIA Container Toolkitを使って、vLLMとOpen WebUIを動かします。主に `gpt-oss-120b` を使用します。 |
+| 第4章 | Python、OpenAI Python SDK、OpenAI互換APIでアクセスできるモデル実行環境。画像入力の例では、Ollamaなどで画像入力に対応したマルチモーダルモデルを起動します。 |
+| 第5章 | RAGパイプラインの実装例では、Python、Ollama、OpenAI Python SDK、Chroma、`pdfplumber` を使います。Ollamaに、回答生成用の `qwen3:8b` と埋め込み用の `nomic-embed-text` を用意します。 |
+| 第6章 | Python 3.12以降、uv、CUDA 12.4とbf16に対応したNVIDIA GPU。書籍の学習例ではH100 80GBを1枚使用します。データセットのアノテーションにはOpenAI互換APIへの接続が必要です。 |
 
 ダウンロード後は、試したい章・節のディレクトリを開き、書籍およびサンプルに添付の手順に沿って、モデルの取得、依存パッケージのインストール、サンプルの実行を行ってください。
 
