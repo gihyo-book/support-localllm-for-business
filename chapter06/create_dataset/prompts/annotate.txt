@@ -1,0 +1,33 @@
+以下のQAペアから、回答に関連する固有表現（related_entities）と回答タイプ（answer_type）を抽出してください。
+
+## 入力
+質問: {question}
+回答: {answer}
+根拠文: {evidence}
+
+## related_entities
+回答の理解に重要な固有表現を1〜5個抽出してください。回答自体もエンティティとして含めてください。
+- name: エンティティ名（テキスト中の表記のまま）
+- type: 以下のいずれか → 人物, 地名, 組織, 日時, 作品, 数値, 概念, 物質, 製品, 生物, 事象, 言語, その他
+- relation: 回答との関係を簡潔に（例: 創業者, 所在地, 発表年, 回答そのもの）
+
+## answer_type
+回答を以下のいずれか1つに分類してください:
+- person: 人名
+- location: 地名・場所
+- organization: 組織・団体・企業
+- date: 年・月日・時代
+- number: 数値・数量
+- other: 上記以外
+
+## 出力
+JSON形式のみで回答してください。説明文や補足は不要です。
+
+```json
+{
+  "related_entities": [
+    {"name": "...", "type": "...", "relation": "..."}
+  ],
+  "answer_type": "..."
+}
+```
